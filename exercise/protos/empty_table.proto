@@ -1,0 +1,18 @@
+syntax="proto3";
+
+service SearchTable{
+  rpc GetData(Table) returns (Empty){}
+}
+
+message Table {
+  string name=1;
+}
+
+message Empty {
+  bool empty=1;
+  Table table_name=2;
+}
+
+
+//pb2_grpc: Stub客户端的连接
+//pb2_grpc：Servicer服务端的接口
